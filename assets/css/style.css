@@ -1557,6 +1557,27 @@ Subscribe Section style
     /*width:15%;*/
 }
 
+.cupon{
+    background: url(../images/background/tenor.gif) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.main_cupon{
+    width:100%;
+    display: block;
+}
+.main_cupon .cupon_btns .form-group{
+    width:60%;
+    display: inline-block;
+}
+.main_cupon .cupon_btns .form-group #inputEmail2{
+    width:100%;
+    background-color: transparent;
+    color:#fff;
+}
+.main_cupon .cupon_btns button.btn{
+    /*width:15%;*/
+}
 
 /*
 Blog Section style
