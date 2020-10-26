@@ -14,11 +14,12 @@ a {
 }
 
 #hero-slides {
+   display:absolute;
   --page: 0;
   height: 100vh;
-  background: #25303c;
+  background: #143240;
   background: -webkit-gradient(linear, left top, right top, from(#3e4751), to(#25303c));
-  background: linear-gradient(90deg, #3e4751 0%, #25303c 100%);
+  background: linear-gradient(90deg, #005780 0%, #eac300 100%);
 }
 #hero-slides #header {
   height: 12vh;
@@ -31,13 +32,13 @@ a {
   font-style: italic;
 }
 #hero-slides #header #logo:before {
-  content: 'The';
+  content: 'Mi';
   text-transform: uppercase;
   font-weight: 100;
   margin-right: 0.4em;
 }
 #hero-slides #header #logo:after {
-  content: 'Wall';
+  content: 'Viaje';
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -74,7 +75,7 @@ a {
 #hero-slides #slides-cont .button {
   width: 5vw;
   height: var(--button-height);
-  background: #0d96f2;
+  background: #143240;
   position: absolute;
   right: 5.375vw;
   top: 38vh;
@@ -171,7 +172,7 @@ a {
   width: 24em;
   height: var(--slides-height);
   margin: 0 1.333em;
-  background: #101419;
+  background: #143240;
   color: white;
   background-size: cover;
   background-position: center;
@@ -251,7 +252,7 @@ a {
 }
 #hero-slides #slides .slide .link {
   display: inline-block;
-  background: #0d96f2;
+  background: #143240;
   padding: 0.5em 1.25em;
   font-size: 1.33em;
   opacity: 0;

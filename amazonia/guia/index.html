@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+<title>Virtual Tour Travel</title>
+<script src="https://kit.fontawesome.com/d6f9396622.js" crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+ <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+
+  <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<nav>
+<ul>
+	<li><a href="#">      </a></li>
+	<li><a href="#">      </a> </li>
+	<li><a href="#"></a></li>
+	<li><a href="#">TOURS AMAZONIA TRAVEL</a>
+
+	</li>
+</ul>
+<div class="button">
+	<a class="btn-open" href="#"></a>
+</div>
+</nav>
+<div class="overlay">
+	<a href="index.html">
+	<center>
+	<img src="log.png" alt="laborall" style="height: 200px;" >
+	</center>
+	</a>
+	<div class="wrap">
+		<ul class="wrap-nav">
+			<li><a href="#">Lugares</a>
+			<ul>
+				<li><a href="#">Restaurantes</a></li>
+				<li><a href="#">Hoteles</a></li>
+				<li><a href="#">Parques</a></li>
+				<li><a href="#">Museos</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Experiencias</a>
+			<ul>
+				<li><a href="https://www.google.hr/">Ecológicas</a></li>
+				<li><a href="#">Culinarias</a></li>
+				<li><a href="#">Religiosas</a></li>
+				<li><a href="#">Actuáles</a></li>
+				<li><a href="#">Nocturnas</a></li>
+			</ul>
+			</li>
+			<li><a href="#">Grupo Amazonia</a>
+			<ul>
+				<li><a href="#">Agencia</a></li>
+				<li><a href="#">Lugares</a></li>
+				<li><a href="#">Experiencias</a></li>
+			</ul>
+			</li>
+		</ul>
+		<div class="social">
+			<a href="www.facebook.com/amazoniatravel">
+			<div class="social-icon">
+				<i class="fa fa-facebook"></i>
+			</div>
+			<p>
+				De Luis Cruz<br>
+				 Site: <a href="http://laborall.club/">Luis Cruz</a>
+			</p>
+		</div>
+	</div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="script.js"></script>
+
+<style>
+#map {
+    position: fixed;
+    width:50%;
+}
+#features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: Tw Cen MT;
+    overflow-y: scroll;
+    background-color: #fafafa;
+}
+section {
+    padding:  25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 20px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 1000px;
+}
+</style>
+
+<div id='map'></div>
+
+<div id='features'>
+    <section id='chiapas' class='active'>
+        <h3>VIAJE A MÉXICO</h3>
+        <p>Del 300 al 900 de nuestra era, en lo espeso de la Selva Lacandona, las sorprendentes metrópolis mayas se erigieron en verdaderas ciudades-estado que establecieron alianzas, libraron batallas, dominaron territorios y vidas, y crearon formas culturales que todavía no se nos revelan por completo.</p>
+    </section>
+    <section id='oaxaca'>
+        <h3>Oaxaca</h3>
+        <p>El influjo que ejerce esta enigmática cultura ha motivado el desplazamiento de investigadores especializados y viajeros provenientes de todas partes del mundo, ávidos de conocer la magnificencia de esta civilización, a través de los vestigios arqueológicos explorados, así como de los muchos que aún quedan por descubrir.</p>
+    </section>
+    <section id='tabasco'>
+        <h3>Tabasco</h3>
+        <p>Tabasco, además de la increíble beleza de sus paisajes, sus pueblos pintorescos, sus soberbios monumentos coloniales, ofrece los majestuosos vestigios de la antigüedad mesoamericana, cuya riqueza y variedad se funden con el verde y los sonidos de la selva.</p>
+    </section>
+    <section id='yucatan'>
+        <h3>En medio de la selva,</h3>
+        <p>Palenque se desarrolló como una de las ciudades más nobles del período Clásico maya, sede de una poderosa dinastía que dominó las montañas del norte de Chiapas y las llanuras, de Tabasco, territorio que ahora, algunos investigadores han reconocido como el reino de Lakamhá. La majestuosidad del Templo de las Inscripciones domina la gran plaza. Edificio así nombrado debido a los tableros glíficos tallados en caliza que se hallan en su interior. Se trata de un auténtico mausoleo mandado a levantar por Pakal (gobernante maya del 615 al 683 d.C.) para que le sirviera de tumba.<br><br> <img src="https://www.elsoldemexico.com.mx/mexico/89a6n6-mexico-cuartoscuro-zocalo.jpg/ALTERNATES/LANDSCAPE_1140/Me%CC%81xico%20Cuartoscuro%20Zocalo.jpg" width='480' ><br><br><a href="https://www.elsoldemexico.com.mx/mexico/89a6n6-mexico-cuartoscuro-zocalo.jpg/ALTERNATES/LANDSCAPE_1140/Me%CC%81xico%20Cuartoscuro%20Zocalo.jpg">MEXICO</a> </p>
+    </section>
+    <section id='veracruz'>
+        <h3>PALENQUE – PUEBLO MÁGICO</h3>
+        <p>Es uno de los destinos de Chiapa donde los aventureros se lanzan a descubrir una de las ciudades más impresionantes de la cultura maya y a reencontrarse con la madre naturaleza. Cada rincón en este lugar habla de historia, leyendas y hechos trascendentales.Reconocido por su inmensa riqueza natural y su patrimonio cultural, en septiembre de 2015 fue nombrado Pueblo Mágico..<br><br> <img src="https://www.elsoldemexico.com.mx/mexico/89a6n6-mexico-cuartoscuro-zocalo.jpg/ALTERNATES/LANDSCAPE_1140/Me%CC%81xico%20Cuartoscuro%20Zocalo.jpg" width='480' ><br><br><a href=https://www.elsoldemexico.com.mx/mexico/89a6n6-mexico-cuartoscuro-zocalo.jpg/ALTERNATES/LANDSCAPE_1140/Me%CC%81xico%20Cuartoscuro%20Zocalo.jpg>Mexico</a>
+        </p>
+    </section>
+    <section id='mexico'>
+        <h3>MEXICO</h3>
+        <p>Dentro de esta comunidad de la etnia chol, se encuentran los centros ecoturísticos Escudo Jaguar y Nueva Alianza. El poblado cuenta con un pequeño museo arqueológico. Frontera Corozal sirve de enlace fluvial para tomar lanchas que conducen por le río Usumacinta hasta la imponente Zona Arqueológica de Yaxchilán. <img src="https://www.elsoldemexico.com.mx/mexico/89a6n6-mexico-cuartoscuro-zocalo.jpg/ALTERNATES/LANDSCAPE_1140/Me%CC%81xico%20Cuartoscuro%20Zocalo.jpg" width='480' ><br><br><a href=https://www.elsoldemexico.com.mx/mexico/89a6n6-mexico-cuartoscuro-zocalo.jpg/ALTERNATES/LANDSCAPE_1140/Me%CC%81xico%20Cuartoscuro%20Zocalo.jpg>MEXICO</a>
+      </p>
+    </section>
+
+</div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWNuYWxseXAiLCJhIjoiY2ppbXE4cmNkMDRrOTNwdDg3YXdyaGRwciJ9.PNaMk0MqD9_29snZmJD_lg';
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mcnallyp/cjjnynuye98l32sqm0kj6gc74',
+        bearing: -0,
+        center: [71.274365,62.020203],
+        zoom: 3,
+        speed: 0.8,
+        pitch: 0
+});
+var chapters = {
+    'chiapas': {
+        bearing: -0,
+        center: [16.7651, -96.5125],
+        zoom: 9.46,
+        speed: 0.8,
+        pitch: 20
+    },
+    'oaxaca': {
+        duration: 6000,
+        center: [17.05, -96.7167],
+        bearing: 25,
+        zoom: 6.14,
+        pitch: 0
+    },
+    'yucatan': {
+        bearing: 30,
+        center: [21.2125, -87.7417],
+        zoom: 7.99,
+        speed: 0.6,
+        pitch: 30
+    },
+    'tabasco': {
+        bearing: 45,
+        center: [17.83, -92.54],
+        zoom: 15.77,
+        pitch: 90
+    },
+    'veracruz': {
+        bearing: 60,
+        center: [21.2125, -87.7417],
+        zoom: 6.84,
+        speed: 0.6,
+        pitch: 45
+    },
+    'mexico': {
+        bearing: 0,
+        center: [17.83, -92.54],
+        zoom: 3,
+        pitch: 0,
+        speed: 1
+    },
+
+};
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+    var chapterNames = Object.keys(chapters);
+    for (var i = 0; i < chapterNames.length; i++) {
+        var chapterName = chapterNames[i];
+        if (isElementOnScreen(chapterName)) {
+            setActiveChapter(chapterName);
+            break;
+        }
+    }
+};
+var activeChapterName = 'moscow';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+    map.flyTo(chapters[chapterName]);
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+    activeChapterName = chapterName;
+}
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+
+<div class="container">
+  <h1>Guía del viajero</h1>
+  <span class="close"></span>
+
+  <div class="slider-container">
+    <div class="slider-turn">
+      <p>
+        Encuentra tu destino en los tours de amazonia travel
+      </p>
+
+      <p>
+        Selecciona y guarda en favoritos tus destinos y experiencias
+        <a href="http://amazoniatravel.tadabase.io" title="Dribbble shot" target="_blank">Buscar destinos</a>
+      </p>
+
+      <p>
+        Registrate y descarga tu itinerario de amazonia travel
+      </p>
+
+      <p>
+        <a href="https://facebook.com/amazoniatravel" title="Facebook" target="_blank">Siguenos en Facebook para agregar cupones</a>
+
+      </p>
+
+      <p>Bienvenido a la guía turistica número en Chiapas</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="step">
+      <span></span>
+      <ul>
+        <li data-num="1"></li>
+        <li data-num="2"></li>
+        <li data-num="3"></li>
+        <li data-num="4"></li>
+        <li data-num="5"></li>
+      </ul>
+    </div>
+    <button class="btn">Siguiente</button>
+  </div>
+</div>
+<button class="open">GUÍA</button>
+</div>
+<!-- partial -->
+
+
+</html>
